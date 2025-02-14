@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-practice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-practice
+  template:
+    metadata:
+      labels:
+        app: api-practice
+    spec:
+      containers:
+      - name: api-practice
+        image: taufansa/api-practice
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: taufan-secret
