@@ -38,8 +38,8 @@ docker push <your-dockerhub-username>/sample-deploy-k8
 
 Apply the Kubernetes deployment and service configuration:
 ```sh
-kubectl apply -f k8s-deployment.yaml
-kubectl apply -f k8s-service.yaml
+kubectl apply -f ./deploy/deployment.yaml
+kubectl apply -f ./deploy/service.yaml
 ```
 
 Check if the pods are running:
@@ -60,8 +60,8 @@ minikube service sample-deploy-k8-service
 ## 4. Clean Up
 To delete the deployment and service:
 ```sh
-kubectl delete -f k8s-deployment.yaml
-kubectl delete -f k8s-service.yaml
+kubectl delete -f ./deploy/deployment.yaml
+kubectl delete -f ./deploy/service.yaml
 ```
 
 ## Conclusion
